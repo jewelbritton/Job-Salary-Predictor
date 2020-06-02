@@ -64,7 +64,7 @@ The feature importance for the Logistic Regression showed that job seniority (up
 
 The best model so far, Logistic Regression, was performing at about 77% accuracy, which was quite an improvement from the 50% accuracy of randomly selecting above or below median and the 64% accuracy by only taking location into account. However, it still makes incorrect predictions 23% of the time. In this scenerio, it would be better to wrongly predict that someone will earn less than median when they will actually earn more. In this case, even if the prediction is wrong they can be happily surprised that they will make more than expected. In order to shift our model's predictions so that we do not incorrectly tell someone that they will earn more than median, the prediction threshold must increase. Below is a graph that shows the tradeoff between accuracy and threshold. 
 
-<img>
+<img src = "visuals/accuracy & threshold">
 
 By increasing the threshold from .5 to .85 the model predicts class 1 (having a high salary) less often, and therefore decreases the number of false negatives and increases the precision score for class 1. The original precision was .75 and now the precision is .81. If the threshold was set further to .9 it would have a perfect precision score, but the model would suffer from inaccuracy since the predictions would simply be for class 0 nearly every time. Raising the threshold decreased the model's accuracy a bit since it will incorrectly classify a listing as having a low salary more than before, but in this scenerio it is better for this to be the case. 
 
